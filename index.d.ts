@@ -21,13 +21,12 @@ declare interface SequelizeStoreOptions {
 declare class SequelizeStore extends Store {
 	sync(): void
 	touch(sid: string, data: any, callback: (err: any) => void): void
-
 }
 
 declare interface SequelizeStoreConstructor {
 	new(options: SequelizeStoreOptions): SequelizeStore
 }
 
-declare function init(store: (config?: any) => Store): SequelizeStoreConstructor
+declare function init(store: typeof Store): SequelizeStoreConstructor
 
-export = init
+export default init
