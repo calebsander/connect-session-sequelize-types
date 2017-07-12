@@ -29,4 +29,4 @@ declare interface SequelizeStoreConstructor {
 
 declare function init(store: typeof Store): SequelizeStoreConstructor
 
-export default init
+export = init
